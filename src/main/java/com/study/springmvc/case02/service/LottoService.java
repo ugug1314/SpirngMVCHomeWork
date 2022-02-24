@@ -1,13 +1,17 @@
 package com.study.springmvc.case02.service;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -44,13 +48,17 @@ public class LottoService {
 	}
 	
 	//統計數字出現的次數
-		//統計數字出現的次數
 		public Map<String,Integer> calNumapearCount() {
 			Map<String,Integer> ApearNumCounts=new HashMap<>();
 			lottos.stream().flatMapToInt(n->n.stream().mapToInt(v->v))
 			.forEach(s->ApearNumCounts.merge(s+"",1,Integer::sum));
-			System.out.println(ApearNumCounts);
-			//lottos.stream().forEach(n->ApearNumCounts.computeIfPresent(n,(key,val)->val+1));
-			return ApearNumCounts;
+			
+			//Map<String, Integer> result = ApearNumCounts.entrySet().stream()
+	               // .sorted(Entry.comparingByValue(Comparator.reverseOrder()))
+	               // .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+			 
+					// result.forEach((k,v)->System.out.println(k+"="+v));		
+			
+			return  ApearNumCounts;
   }
 }

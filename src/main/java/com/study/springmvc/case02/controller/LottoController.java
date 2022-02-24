@@ -30,7 +30,7 @@ public class LottoController {
 	@RequestMapping({"/"})
 	public String index(Model model) {
 		model.addAttribute("lottos", lottoService.getLottos());
-		model.addAttribute("countNumRlt", lottoService.calNumapearCount());
+		//model.addAttribute("countNumRlt", lottoService.calNumapearCount());
 		return "case02/show_lotto";
 	}
 	
@@ -56,6 +56,7 @@ public class LottoController {
 		//回到根目錄
 		return "redirect:../";
 	}
+	
 	
 	//回家作業-統計數字出現的次數
 	@RequestMapping(value="/countNum")
