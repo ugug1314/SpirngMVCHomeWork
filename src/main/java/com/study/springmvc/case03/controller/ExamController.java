@@ -28,6 +28,7 @@ public class ExamController {
 		model.addAttribute("exams", examService.query());
 		model.addAttribute("examSubjects",examService.queryExamSubjectList());  //加入所有考試項目
 		model.addAttribute("examTimes",examService.queryExamTimesList());       //加入所有考試時間
+		model.addAttribute("examPays",examService.queryExamPayList());           //加入所有的繳費狀態
 		return "case03/exam";
 	}
 	
@@ -40,6 +41,7 @@ public class ExamController {
 			model.addAttribute("exam", optExam.get());
 			model.addAttribute("examSubjects",examService.queryExamSubjectList());  //加入所有考試項目
 			model.addAttribute("examTimes",examService.queryExamTimesList());       //加入所有考試時間
+			model.addAttribute("examPays",examService.queryExamPayList());           //加入所有的繳費狀態
 			return "case03/exam";
 		}
 		// 沒找到資料，應該要透過統一錯誤處理機制來進行...

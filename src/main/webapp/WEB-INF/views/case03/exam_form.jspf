@@ -36,11 +36,12 @@
 		<p />
 		
 		繳費：
-		<!-- homework繳費改成 spform:radiobuttons -->
+		<!-- homework繳費改成 spform:radiobuttons 
 		<spform:radiobutton path="examPay" value="true" />
 		已繳
 		<spform:radiobutton path="examPay" value="false" />
-		未繳
+		未繳-->
+		<spform:radiobuttons items="${ examPays }" path="examPay" itemValue="Pay_id" itemLabel="Pay_name"/>
 		<p />
 		備註：
 		<spform:textarea path="examNote" />

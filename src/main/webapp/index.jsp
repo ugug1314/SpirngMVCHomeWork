@@ -12,6 +12,9 @@
 	<%=new Date()%>
 	<ol>	
 		<li><a href="./mvc/case02/lotto/">樂透選號程式</a></li>	
+                <li><a href="./mvc/case03/exam/">sp:form</a></li>
+	        <li><a href="./mvc/case04/person/">sp:form+驗證</a></li>
+		<li><a href="./mvc/case04/stock/">Stock買賣+自訂驗證</a></li>
 	</ol>
 </body>
 <!--  -->
