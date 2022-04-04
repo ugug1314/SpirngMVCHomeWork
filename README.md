@@ -17,7 +17,7 @@
 
 <自行加強-在點選case01中HelloController下的方法時，一併將程式碼顯示於下方><br>
 2022/4/4<br>
-程式碼1:[在springmvc-servlet.xml檔新增<aop:aspectj-autoproxy></aop:aspetj-autoproxy>]https://github.com/ugug1314/SpirngMVCHomeWork/blob/main/src/main/webapp/WEB-INF/springmvc-servlet.xml<br>
-程式碼2:[在HelloController中各方法之間加入#號當作識別記號]<br>https://github.com/ugug1314/SpirngMVCHomeWork/blob/main/src/main/java/com/study/springmvc/case01/controller/HelloController.java<br>
-程式碼3:[新增GetcodesAspect切面類別]https://github.com/ugug1314/SpirngMVCHomeWork/blob/main/src/main/java/com/study/springmvc/case01/entity/AopConfig.java<br>
-程式碼4:[新增AopConfig設定檔註冊切面程式]https://github.com/ugug1314/SpirngMVCHomeWork/blob/main/src/main/java/com/study/springmvc/case01/entity/AopConfig.java<br>
+程式碼1:[在springmvc-servlet.xml檔新增<aop:aspectj-autoproxy></aop:aspetj-autoproxy>](https://github.com/ugug1314/SpirngMVCHomeWork/blob/main/src/main/webapp/WEB-INF/springmvc-servlet.xml)<br>
+程式碼2:[在HelloController中各方法之間加入#號當作識別記號](https://github.com/ugug1314/SpirngMVCHomeWork/blob/main/src/main/java/com/study/springmvc/case01/controller/HelloController.java)<br>
+程式碼3:[新增GetcodesAspect切面類別](https://github.com/ugug1314/SpirngMVCHomeWork/blob/main/src/main/java/com/study/springmvc/case01/entity/AopConfig.java)<br>
+程式碼4:[新增AopConfig設定檔註冊切面程式](https://github.com/ugug1314/SpirngMVCHomeWork/blob/main/src/main/java/com/study/springmvc/case01/entity/AopConfig.java)<br>
