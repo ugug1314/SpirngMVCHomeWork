@@ -41,6 +41,8 @@ request.onreadystatechange = function() {
 			   }
 			    text += "</tr></table>";
 			    result.innerHTML=text; 
+			    console.log(obj);
+			    drawChart(3);
 			 
 		   }
 	}  

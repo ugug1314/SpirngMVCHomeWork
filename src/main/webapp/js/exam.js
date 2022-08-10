@@ -15,3 +15,8 @@ function deleteExam(index) {
 	document.getElementById('_method').value = 'DELETE';
 	updateExam(index);
 }
+
+function resetExam() {
+	document.getElementById('_method').value = 'POST';
+	
+}

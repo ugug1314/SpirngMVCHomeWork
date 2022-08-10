@@ -8,7 +8,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<style type="text/css">
+.error {
+	color: #FF0000
+		}
+</style>
    <%@ include file="include/header.jspf" %>
 </head>
 <body class="exambody">
@@ -23,8 +27,8 @@
 				<%@ include file="exam_list.jspf" %>
 			</td>
 		</tr>
-		
 	</table>
 	<%@ include file="include/footer.jspf" %>
+	<a href="http://localhost:8080/springmvc/">回首頁</a>
 </body>
 </html>

@@ -13,6 +13,8 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 
+import javax.json.bind.JsonbConfig;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -38,6 +40,7 @@ public class LottoService {
 	
 	//產生樂透號碼
 	private Set<Integer> generateLotto() {
+		//new一個亂數物件
 		Random r = new Random();
 		// 樂透 539: 1~39 取出不重複的5個號碼
 		Set<Integer> lotto = new LinkedHashSet<>();
@@ -53,12 +56,12 @@ public class LottoService {
 			lottos.stream().flatMapToInt(n->n.stream().mapToInt(v->v))
 			.forEach(s->ApearNumCounts.merge(s+"",1,Integer::sum));
 			
-			//Map<String, Integer> result = ApearNumCounts.entrySet().stream()
-	               // .sorted(Entry.comparingByValue(Comparator.reverseOrder()))
-	               // .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+		Map<String, Integer> result = ApearNumCounts.entrySet().stream()
+	                .sorted(Entry.comparingByValue(Comparator.reverseOrder()))
+	                .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 			 
 					// result.forEach((k,v)->System.out.println(k+"="+v));		
 			
-			return  ApearNumCounts;
+			return  result;
   }
 }

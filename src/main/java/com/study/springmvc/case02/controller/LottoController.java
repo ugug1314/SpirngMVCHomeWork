@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.json.bind.JsonbConfig;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.MediaType;
@@ -17,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.google.gson.JsonObject;
 import com.study.springmvc.case02.service.LottoService;
 
 @Controller
@@ -30,7 +34,7 @@ public class LottoController {
 	@RequestMapping({"/"})
 	public String index(Model model) {
 		model.addAttribute("lottos", lottoService.getLottos());
-		//model.addAttribute("countNumRlt", lottoService.calNumapearCount());
+		model.addAttribute("countNumRlt",lottoService.calNumapearCount());
 		return "case02/show_lotto";
 	}
 	
